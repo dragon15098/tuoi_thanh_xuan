@@ -424,7 +424,7 @@ void control_game(int map[][4]){
 				break;
 			}
 			else{
-				cout << "Not done. Max number: " << max_map(map);
+				cout << "Chua hoan thanh. So cao nhat la : " << max_map(map);
 				break;
 			}
 		}
@@ -448,6 +448,7 @@ void mode_game(){
 		case 1:
 			new_game();
 			read_map(map);
+			random(map);
 			print_map(map);
 			control_game(map);
 			break;
@@ -461,9 +462,5 @@ void mode_game(){
 	}
 }
 int main(){
-	//int map[][4] = {{4,8,16,32}, {64,128,256,512}, {1024,2048,4096,8192}, {16384,32768,65536,131072}};
-	//print_map(map);
-	//control_game(map);
-	//read_map(map);
 	mode_game();
 }
